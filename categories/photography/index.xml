@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>photography on Nederburg</title>
+    <link>https://example.org/categories/photography/</link>
+    <description>Recent content in photography on Nederburg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Dec 2017 19:53:42 +0530</lastBuildDate>
+    
+	<atom:link href="https://example.org/categories/photography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Totally Response Theme</title>
+      <link>https://example.org/post/work5/</link>
+      <pubDate>Mon, 25 Dec 2017 19:53:42 +0530</pubDate>
+      
+      <guid>https://example.org/post/work5/</guid>
+      <description>&lt;p&gt;Fifth abundantly made Give sixth hath. Cattle creature i be don&amp;rsquo;t them.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

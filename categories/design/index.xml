@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design on Nederburg</title>
+    <link>https://example.org/categories/design/</link>
+    <description>Recent content in design on Nederburg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Feb 2017 18:25:22 +0530</lastBuildDate>
+    
+	<atom:link href="https://example.org/categories/design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Name of the work 1</title>
+      <link>https://example.org/post/work1/</link>
+      <pubDate>Tue, 14 Feb 2017 18:25:22 +0530</pubDate>
+      
+      <guid>https://example.org/post/work1/</guid>
+      <description>&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>This is a Standard Post</title>
+      <link>https://example.org/post/work2/</link>
+      <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
+      
+      <guid>https://example.org/post/work2/</guid>
+      <description>&lt;p&gt;This is what an ordinary post looks like, and you’re reading a custom excerpt right now. Have fun looking around the theme, and don’t forget to check it out on your phone!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
