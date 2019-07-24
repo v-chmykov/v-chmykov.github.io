@@ -1,5 +1,5 @@
-baseurl = "https://example.org/"
-title = "Nederburg"
+baseurl = "https://v-chmykov.github.io/"
+title = "Personal blog"
 theme = "hugo-nederburg-theme"
 languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
