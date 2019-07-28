@@ -1,51 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Personal blog</title>
+    <title>Categories on Dressed in a Dress - The Sewing Journal</title>
     <link>https://v-chmykov.github.io/categories/</link>
-    <description>Recent content in Categories on Personal blog</description>
+    <description>Recent content in Categories on Dressed in a Dress - The Sewing Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Dec 2017 19:53:42 +0530</lastBuildDate>
     
 	<atom:link href="https://v-chmykov.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>photography</title>
-      <link>https://v-chmykov.github.io/categories/photography/</link>
-      <pubDate>Mon, 25 Dec 2017 19:53:42 +0530</pubDate>
-      
-      <guid>https://v-chmykov.github.io/categories/photography/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>code</title>
-      <link>https://v-chmykov.github.io/categories/code/</link>
-      <pubDate>Tue, 21 Nov 2017 19:50:47 +0530</pubDate>
-      
-      <guid>https://v-chmykov.github.io/categories/code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>travel</title>
-      <link>https://v-chmykov.github.io/categories/travel/</link>
-      <pubDate>Fri, 05 May 2017 19:44:32 +0530</pubDate>
-      
-      <guid>https://v-chmykov.github.io/categories/travel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>design</title>
-      <link>https://v-chmykov.github.io/categories/design/</link>
-      <pubDate>Tue, 14 Feb 2017 18:25:22 +0530</pubDate>
-      
-      <guid>https://v-chmykov.github.io/categories/design/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

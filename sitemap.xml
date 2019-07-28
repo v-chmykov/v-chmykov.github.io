@@ -3,95 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://v-chmykov.github.io/post/work1/</loc>
-    <lastmod>2017-02-14T18:25:22+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://v-chmykov.github.io/post/work2/</loc>
+    <loc>https://v-chmykov.github.io/blog/work2/</loc>
     <lastmod>2016-11-05T19:41:01+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://v-chmykov.github.io/post/work3/</loc>
-    <lastmod>2017-05-05T19:44:32+05:30</lastmod>
+    <loc>https://v-chmykov.github.io/blog/work3/</loc>
+    <lastmod>2016-11-05T19:44:32+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://v-chmykov.github.io/post/work4/</loc>
-    <lastmod>2017-11-21T19:50:47+05:30</lastmod>
+    <loc>https://v-chmykov.github.io/blog/work4/</loc>
+    <lastmod>2016-11-05T19:50:47+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://v-chmykov.github.io/post/work5/</loc>
-    <lastmod>2017-12-25T19:53:42+05:30</lastmod>
+    <loc>https://v-chmykov.github.io/blog/work5/</loc>
+    <lastmod>2016-11-05T19:53:42+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://v-chmykov.github.io/post/work7/</loc>
-    <lastmod>2018-01-01T19:57:40+05:30</lastmod>
+    <loc>https://v-chmykov.github.io/blog/work6/</loc>
+    <lastmod>2016-11-05T19:56:17+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://v-chmykov.github.io/post/work8/</loc>
-    <lastmod>2018-02-14T19:59:22+05:30</lastmod>
+    <loc>https://v-chmykov.github.io/blog/work7/</loc>
+    <lastmod>2016-11-05T19:57:40+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://v-chmykov.github.io/post/work9/</loc>
-    <lastmod>2018-05-06T20:02:19+05:30</lastmod>
+    <loc>https://v-chmykov.github.io/blog/work8/</loc>
+    <lastmod>2016-11-05T19:59:22+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://v-chmykov.github.io/post/work10/</loc>
-    <lastmod>2018-07-04T20:22:08+05:30</lastmod>
+    <loc>https://v-chmykov.github.io/blog/work9/</loc>
+    <lastmod>2016-11-05T20:02:19+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://v-chmykov.github.io/post/work11/</loc>
-    <lastmod>2018-09-30T20:23:59+05:30</lastmod>
+    <loc>https://v-chmykov.github.io/blog/work10/</loc>
+    <lastmod>2016-11-05T20:22:08+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://v-chmykov.github.io/</loc>
-    <lastmod>2018-09-30T20:23:59+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://v-chmykov.github.io/post/</loc>
-    <lastmod>2018-09-30T20:23:59+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://v-chmykov.github.io/categories/</loc>
-    <lastmod>2017-12-25T19:53:42+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://v-chmykov.github.io/categories/photography/</loc>
-    <lastmod>2017-12-25T19:53:42+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://v-chmykov.github.io/categories/code/</loc>
-    <lastmod>2017-11-21T19:50:47+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://v-chmykov.github.io/categories/travel/</loc>
-    <lastmod>2017-05-05T19:44:32+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://v-chmykov.github.io/categories/design/</loc>
-    <lastmod>2017-02-14T18:25:22+05:30</lastmod>
-    <priority>0</priority>
+    <loc>https://v-chmykov.github.io/blog/work11/</loc>
+    <lastmod>2016-11-05T20:23:59+05:30</lastmod>
   </url>
   
   <url>
@@ -102,6 +60,28 @@
   <url>
     <loc>https://v-chmykov.github.io/about/</loc>
     <lastmod>2016-11-05T21:05:33+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://v-chmykov.github.io/blog/</loc>
+    <lastmod>2016-11-05T20:23:59+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://v-chmykov.github.io/</loc>
+    <lastmod>2016-11-05T20:23:59+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://v-chmykov.github.io/blog/work1/</loc>
+    <lastmod>2016-11-05T18:25:22+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://v-chmykov.github.io/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

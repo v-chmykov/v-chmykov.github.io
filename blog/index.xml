@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dressed in a Dress - The Sewing Journal</title>
-    <link>https://v-chmykov.github.io/</link>
-    <description>Recent content on Dressed in a Dress - The Sewing Journal</description>
+    <title>Blogs on Dressed in a Dress - The Sewing Journal</title>
+    <link>https://v-chmykov.github.io/blog/</link>
+    <description>Recent content in Blogs on Dressed in a Dress - The Sewing Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Nov 2016 20:23:59 +0530</lastBuildDate>
     
-	<atom:link href="https://v-chmykov.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://v-chmykov.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
