@@ -98,7 +98,7 @@ section.background-secondary {
   color: #555555;
 }
 .text-gray-light {
-  color: #999999;
+  color: #777777;
 }
 .text-gray-lighter {
   color: #cdcdcd;
@@ -347,8 +347,8 @@ SIDEBAR + RIGHT COLUMN
   text-decoration: none;
 }
 .sidebar-p {
-  color: #999999;
-  font-size: 14px;
+  color: #777777;
+  font-size: 0.8em;
 }
 .sidebar-menu {
   list-style-type: none;
@@ -367,7 +367,7 @@ SIDEBAR + RIGHT COLUMN
   font-family: 'FontAwesome';
   content: '\f105';
   margin: 0 5px 0 -15px;
-  color: #999999;
+  color: #978383;
 }
 .sidebar-menu li.active a {
   color: #ef5285;
@@ -384,6 +384,7 @@ SIDEBAR + RIGHT COLUMN
   color: #ef5285;
 }
 .content-column {
+  background-color: #fff;
   padding-top: 40px;
 }
 .content-column.white-background {
@@ -398,6 +399,7 @@ SIDEBAR + RIGHT COLUMN
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  text-align: justify;
 }
 @media (min-width: 1200px) {
   .content-column-content {
@@ -410,16 +412,22 @@ SIDEBAR + RIGHT COLUMN
 }
 .content-column-content p,
 .content-column-content li {
-  color: #999999;
+  color: #777777;
 }
-.content-column-content ul li {
-  list-style-type: none;
+.content-column-content ul {
+  list-style: none;
+}
+.content-column-content p {
+  display: inline-block;
 }
 .content-column-content ul li:before {
-  font-family: 'FontAwesome';
-  content: '\f105';
-  margin: 0 5px 0 -15px;
+  content: '>';
   color: #ef5285;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  vertical-align: top;
 }
 .small-navbar {
   margin-bottom: 20px;
@@ -507,7 +515,7 @@ SERVICES / INTEGRATIONS
   letter-spacing: 0.1em;
   font-size: 18px;
   font-weight: 400;
-  color: #999999;
+  color: #777777;
   margin-bottom: 40px;
 }
 .services .heading {
@@ -528,7 +536,7 @@ SERVICES / INTEGRATIONS
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 60px;
-  color: #999999;
+  color: #777777;
 }
 /*
 =====================
@@ -589,8 +597,8 @@ p.social a {
   font-size: 15px;
   text-align: center;
   vertical-align: bottom;
-  border: solid 1px #999999;
-  color: #999999;
+  border: solid 1px #777777;
+  color: #777777;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -654,14 +662,14 @@ COPYRIGHT
 =====================
 */
 .copyright {
-  color: #999999;
+  color: #777777;
   font-size: 13px;
 }
 .copyright p.credit {
   margin-bottom: 10px;
 }
 .copyright p.credit a {
-  color: #999999;
+  color: #777777;
 }
 @media (max-width: 991px) {
   .copyright p.credit {
@@ -705,7 +713,7 @@ ABOUT
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #999999;
+  color: #777777;
   font-size: 12px;
 }
 .progress-bar-skill1 {
@@ -830,9 +838,9 @@ a:active {
 }
 .box-masonry {
   background: #fff;
+  border: 1px solid #ccc;
   margin-bottom: 30px;
   position: relative;
-  box-shadow: 0 0 5px #ccc;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -844,6 +852,7 @@ a:active {
   line-height: 1.5;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0.1em;
 }
 .box-masonry h4 a {
@@ -855,11 +864,15 @@ a:active {
   color: #000;
   text-decoration: none;
 }
+.box-masonry hr {
+  margin: 15px auto;
+  width: 50%;
+}
 .box-masonry .box-masonry-text {
   padding: 15px 20px 15px;
 }
 .box-masonry .box-masonry-text p {
-  color: #999999;
+  color: #777777;
   font-size: 14px;
 }
 .box-masonry .box-masonry-hover-text-header {
@@ -971,7 +984,7 @@ a:active {
   color: #555555;
 }
 .box-simple p {
-  color: #999999;
+  color: #777777;
 }
 .box-simple:hover .icon {
   -webkit-transform: scale(1.1, 1.1);
@@ -985,7 +998,7 @@ a:active {
 }
 .box-simple.box-white {
   padding: 20px;
-  border: dotted 1px #999999;
+  color: #777777;
 }
 .box-simple.box-white .icon {
   color: #555555;
@@ -1172,7 +1185,7 @@ a:active {
   letter-spacing: 0.08em;
 }
 .box-image-text .content p {
-  color: #999999;
+  color: #777777;
 }
 .box-image-text.bg-visible .bg {
   opacity: 0.8;
@@ -1239,11 +1252,11 @@ STYLE SWITCHER FOR DEMO
   background-color: #cdcdcd;
 }
 .nav > li.disabled > a {
-  color: #999999;
+  color: #777777;
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #999999;
+  color: #777777;
 }
 .nav .open > a,
 .nav .open > a:hover,
@@ -1587,7 +1600,7 @@ STYLE SWITCHER FOR DEMO
 body {
   font-family: 'Vollkorn', serif;
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.55em;
   color: #000000;
   background-color: #f4f4f4;
 }
@@ -1648,7 +1661,7 @@ hr {
   color: #cccccc;
 }
 .breadcrumb > .active {
-  color: #999999;
+  color: #777777;
 }
 .breadcrumb a {
   color: #ef5285;
@@ -1809,14 +1822,14 @@ label {
   box-shadow: none;
 }
 .form-control::-moz-placeholder {
-  color: #999999;
+  color: #777777;
   opacity: 1;
 }
 .form-control:-ms-input-placeholder {
-  color: #999999;
+  color: #777777;
 }
 .form-control::-webkit-input-placeholder {
-  color: #999999;
+  color: #777777;
 }
 .form-control:focus {
   border-color: #ef5285;
@@ -1857,7 +1870,7 @@ label {
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {
-  color: #999999;
+  color: #777777;
   background-color: #ffffff;
   border-color: #ddd;
 }
@@ -1912,7 +1925,7 @@ label {
 .pagination > .disabled > a,
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
-  color: #999999;
+  color: #777777;
   background-color: #ffffff;
   border-color: #dddddd;
 }
@@ -1958,30 +1971,30 @@ h6,
 }
 h1,
 .h1 {
-  font-size: 48px;
+  font-size: 2.25em;
 }
 h2,
 .h2 {
-  font-size: 38px;
+  font-size: 2em;
 }
 h3,
 .h3 {
-  font-size: 32px;
+  font-size: 1.75em;
   font-weight: 700;
 }
 h4,
 .h4 {
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 700;
 }
 h5,
 .h5 {
-  font-size: 16px;
+  font-size: 1.25em;
   font-weight: 700;
 }
 h6,
 .h6 {
-  font-size: 14px;
+  font-size: 1em;
   font-weight: 700;
 }
 h1,
@@ -2029,21 +2042,21 @@ a.bg-primary:hover {
 }
 abbr[title],
 abbr[data-original-title] {
-  border-bottom: 1px dotted #999999;
+  border-bottom: 1px dotted #777777;
 }
 blockquote {
   padding: 12px 24px;
   margin: 0 0 24px;
   font-size: 16px;
-  border-left: 5px solid #ef5285;
+  border-left: 5px solid #f57fa5;
 }
 blockquote footer,
 blockquote small,
 blockquote .small {
   display: block;
   font-size: 80%;
-  line-height: 1.55;
-  color: #999999;
+  line-height: 1.55em;
+  color: #777777;
 }
 blockquote footer:before,
 blockquote small:before,
