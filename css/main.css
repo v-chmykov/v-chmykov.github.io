@@ -417,8 +417,19 @@ SIDEBAR + RIGHT COLUMN
 .content-column-content ul {
   list-style: none;
 }
-.content-column-content p {
-  display: inline-block;
+.content-column-content img {
+  cursor: pointer;
+}
+.content-column-content img[src*="align=left"] {
+  margin-left: 0;
+  margin-right: 0;
+}
+.content-column-content h2,
+.content-column-content h3,
+.content-column-content h4,
+.content-column-content h5,
+.content-column-content h6 {
+  text-align: left;
 }
 .content-column-content ul li:before {
   content: '>';
@@ -903,68 +914,6 @@ a:active {
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   text-align: center;
-}
-.box-masonry .box-masonry-hover-center .see-more-icon {
-  color: #555555;
-  font-size: 50px;
-}
-.box-masonry:hover {
-  box-shadow: 0 0 5px #999;
-}
-.box-masonry:hover .box-masonry-hover-text-header {
-  opacity: 1;
-}
-.box-masonry:hover .box-masonry-hover-center {
-  opacity: 1;
-}
-.box-masonry:hover .box-masonry-image.with-hover-overlay:before {
-  opacity: 0.8;
-}
-.box-masonry:hover .box-masonry-image.with-hover-icon:after {
-  opacity: 0.7;
-}
-.box-masonry h2:last-child,
-.box-masonry p:last-child {
-  margin-bottom: 0;
-}
-.box-masonry .box-masonry-image {
-  display: block;
-  position: relative;
-  min-height: 100px;
-  background: #ccc;
-}
-.box-masonry .box-masonry-image.with-hover-overlay:before {
-  display: block;
-  position: absolute;
-  content: " ";
-  background: #fff;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.box-masonry .box-masonry-image.with-hover-icon:after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  font-family: 'FontAwesome';
-  content: '\f105';
-  text-align: center;
-  font-size: 50px;
-  color: #555555;
 }
 .box-masonry .box-masonry-image:hover {
   text-decoration: none;
