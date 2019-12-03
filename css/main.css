@@ -1948,6 +1948,12 @@ h3,
   margin-top: 0;
   margin-bottom: 24px;
 }
+p + h2,
+p + .h2,
+p + h3,
+p + .h3 {
+  margin-top: 36px;
+}
 p {
   margin: 0 0 18px;
 }
