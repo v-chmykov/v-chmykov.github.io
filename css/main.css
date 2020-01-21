@@ -1944,7 +1944,9 @@ h1,
 h2,
 .h2,
 h3,
-.h3 {
+.h3,
+h4,
+.h4 {
   margin-top: 0;
   margin-bottom: 24px;
 }
@@ -1952,7 +1954,7 @@ p + h2,
 p + .h2,
 p + h3,
 p + .h3 {
-  margin-top: 36px;
+  margin-top: 32px;
 }
 p {
   margin: 0 0 18px;

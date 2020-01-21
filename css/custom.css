@@ -24,3 +24,63 @@
 .tag {
   font-style: italic;
 }
+
+.content-column-content details {
+  margin-bottom: 1em;
+}
+
+.content-column-content summary {
+  color: #ef5285;
+  font-family: 'Unica One', cursive;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.content-column-content summary::-webkit-details-marker {
+  color: transparent;
+}
+
+.content-column-content details[open] summary {
+  margin-bottom: 0.6em;
+}
+
+.details-closed,
+.content-column-content details[open] .details-opened {
+  display: none;
+}
+
+.content-column-content details[open] .details-closed {
+  display: inline;
+}
+
+.owl-carousel li {
+  list-style: none;
+}
+
+.owl-theme .owl-controls .owl-page span {
+  background-color: #ef5285;
+}
+
+.owl-theme .owl-controls .owl-page span,
+.owl-theme .owl-controls .owl-buttons .owl-next,
+.owl-theme .owl-controls .owl-buttons .owl-prev {
+  opacity: 0.5;
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next,
+.owl-theme .owl-controls .owl-buttons .owl-prev {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #ef5285;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ef5285;
+}
+
+.owl-theme .owl-controls.clickable .owl-page:hover span,
+.owl-theme .owl-controls .owl-buttons .owl-next:hover,
+.owl-theme .owl-controls .owl-buttons .owl-prev:hover {
+  opacity: 1;
+}
