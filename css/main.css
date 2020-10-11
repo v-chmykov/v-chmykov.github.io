@@ -478,9 +478,11 @@ SIDEBAR + RIGHT COLUMN
   transform: translateY(0);
   will-change: transform;
 }
+.elevator:focus,
 .elevator:hover {
   background: #eaeaea;
   color: #eeeeee;
+  outline: none;
 }
 .elevator__icon-svg {
   position: relative;
@@ -497,6 +499,7 @@ SIDEBAR + RIGHT COLUMN
   stroke-width: 0;
   pointer-events: none;
 }
+.elevator:focus .elevator__icon-svg,
 .elevator:hover .elevator__icon-svg {
   color: #f57fa5;
   opacity: 0.75;
