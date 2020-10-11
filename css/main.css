@@ -465,6 +465,47 @@ SIDEBAR + RIGHT COLUMN
   color: #000;
   text-decoration: none;
 }
+.elevator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  width: 60px;
+  height: 100%;
+  color: #cccccc;
+  text-align: center;
+  transform: translateY(0);
+  will-change: transform;
+}
+.elevator:hover {
+  background: #eaeaea;
+  color: #eeeeee;
+}
+.elevator__icon-svg {
+  position: relative;
+  top: 50%;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: transparent;
+  color: #cccccc;
+  vertical-align: middle;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 0;
+  pointer-events: none;
+}
+.elevator:hover .elevator__icon-svg {
+  color: #f57fa5;
+  opacity: 0.75;
+}
+@media (min-width: 768px) {
+  .elevator {
+    display: block;
+  }
+}
 /*
 =====================
 OFF-CANVAS SIDEBAR BEHAVIOUR
