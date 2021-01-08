@@ -184,19 +184,3 @@ $(document).ready(function () {
         navigationText: ["<", ">"]
     });
 });
-
-$(document).ready(function () {
-    var $elevator = $("#js-scroll-to-top");
-    var limit = window.innerHeight / 2;
-    
-    $elevator.on("click", function(e) {
-        e.preventDefault();
-        window.scrollTo(0, 0);
-    });
-
-    $elevator.toggleClass("hidden", window.pageYOffset < limit);
-
-    $(window).on("scroll", function() {
-        $elevator.toggleClass("hidden", window.pageYOffset < limit);
-    });
-});
