@@ -161,6 +161,8 @@ $.fn.alignElementsSameHeight = function () {
     });
 }
 
+var windowWidth = 0;
+
 $(window).load(function () {
     windowWidth = $(window).width();
     $(this).alignElementsSameHeight();
