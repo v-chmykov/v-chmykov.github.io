@@ -35,14 +35,21 @@
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
+  cursor: pointer;
+  outline-color: #ccc;
 }
 
-.content-column-content summary::-webkit-details-marker {
+.content-column-content summary::marker {
   color: transparent;
 }
 
 .content-column-content details[open] summary {
   margin-bottom: 0.6em;
+}
+
+.details-opened {
+  width: 12px;
+  margin: auto 2px;
 }
 
 .details-closed,
