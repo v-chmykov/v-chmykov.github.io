@@ -6,16 +6,12 @@ $(function () {
     carousels();
     utils();
     highlightCurrentPage();
-    makeImagesResponsive();
 });
 
 function highlightCurrentPage() {
     $("a[href='" + location.href + "']").parent().addClass("active");
 }
 
-function makeImagesResponsive() {
-    $("img").addClass("img-responsive");
-}
 /* =========================================
  *  carousels
  *  =======================================*/
