@@ -417,6 +417,10 @@ SIDEBAR + RIGHT COLUMN
 }
 .content-column-content img {
   cursor: pointer;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 .content-column-content h1,
 .content-column-content h2,
