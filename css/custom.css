@@ -91,3 +91,18 @@
 .owl-theme .owl-controls .owl-buttons .owl-prev:hover {
   opacity: 1;
 }
+
+/* Iubenda Cookie Banner - I need to overwrite the font */
+.iubenda-cs-content #iubenda-cs-paragraph .iub-p,
+#iubenda-cs-banner .iubenda-cs-content .iubenda-cs-opt-group-custom button,
+#iubenda-cs-banner .iubenda-cs-opt-group button.iubenda-cs-btn-primary {
+  font-family: 'Vollkorn', serif !important;
+}
+
+.iubenda-cs-content .iub-toggle-checkbox label {
+  margin-bottom: 0px;
+}
+
+#iubenda-cs-banner .iubenda-cs-content .iub-toggle-checkbox span {
+  font-family: 'Unica One', cursive !important;
+}
