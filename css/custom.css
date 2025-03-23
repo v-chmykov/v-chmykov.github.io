@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'quentinregular';
   src: url('fonts/quentin-webfont.woff2') format('woff2'),
-       url('fonts/quentin-webfont.woff') format('woff');
+    url('fonts/quentin-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

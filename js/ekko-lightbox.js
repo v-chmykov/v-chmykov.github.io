@@ -6,13 +6,13 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
 */
 
 
-(function() {
+(function () {
   "use strict";
   var $, EkkoLightbox;
 
   $ = jQuery;
 
-  EkkoLightbox = function(element, options) {
+  EkkoLightbox = function (element, options) {
     var content, footer, header,
       _this = this;
     this.options = $.extend({
@@ -46,10 +46,10 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       bottom: parseFloat(this.modal_dialog.css('padding-bottom')) + parseFloat(this.modal_content.css('padding-bottom')) + parseFloat(this.modal_body.css('padding-bottom')),
       left: parseFloat(this.modal_dialog.css('padding-left')) + parseFloat(this.modal_content.css('padding-left')) + parseFloat(this.modal_body.css('padding-left'))
     };
-    this.modal.on('show.bs.modal', this.options.onShow.bind(this)).on('shown.bs.modal', function() {
+    this.modal.on('show.bs.modal', this.options.onShow.bind(this)).on('shown.bs.modal', function () {
       _this.modal_shown();
       return _this.options.onShown.call(_this);
-    }).on('hide.bs.modal', this.options.onHide.bind(this)).on('hidden.bs.modal', function() {
+    }).on('hide.bs.modal', this.options.onHide.bind(this)).on('hidden.bs.modal', function () {
       if (_this.gallery) {
         $(document).off('keydown.ekkoLightbox');
       }
@@ -60,7 +60,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
   };
 
   EkkoLightbox.prototype = {
-    modal_shown: function() {
+    modal_shown: function () {
       var video_id,
         _this = this;
       if (!this.options.remote) {
@@ -78,11 +78,11 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
           if (this.options.directional_arrows && this.gallery_items.length > 1) {
             this.lightbox_container.append('<div class="ekko-lightbox-nav-overlay"><a href="#" class="' + this.strip_stops(this.options.left_arrow_class) + '"></a><a href="#" class="' + this.strip_stops(this.options.right_arrow_class) + '"></a></div>');
             this.modal_arrows = this.lightbox_container.find('div.ekko-lightbox-nav-overlay').first();
-            this.lightbox_container.find('a' + this.strip_spaces(this.options.left_arrow_class)).on('click', function(event) {
+            this.lightbox_container.find('a' + this.strip_spaces(this.options.left_arrow_class)).on('click', function (event) {
               event.preventDefault();
               return _this.navigate_left();
             });
-            this.lightbox_container.find('a' + this.strip_spaces(this.options.right_arrow_class)).on('click', function(event) {
+            this.lightbox_container.find('a' + this.strip_spaces(this.options.right_arrow_class)).on('click', function (event) {
               event.preventDefault();
               return _this.navigate_right();
             });
@@ -109,19 +109,19 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
         }
       }
     },
-    strip_stops: function(str) {
+    strip_stops: function (str) {
       return str.replace(/\./g, '');
     },
-    strip_spaces: function(str) {
+    strip_spaces: function (str) {
       return str.replace(/\s/g, '');
     },
-    isImage: function(str) {
+    isImage: function (str) {
       return str.match(/(^data:image\/.*,)|(\.(jp(e|g|eg)|gif|png|bmp|webp|svg)((\?|#).*)?$)/i);
     },
-    isSwf: function(str) {
+    isSwf: function (str) {
       return str.match(/\.(swf)((\?|#).*)?$/i);
     },
-    getYoutubeId: function(str) {
+    getYoutubeId: function (str) {
       var match;
       match = str.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/);
       if (match && match[2].length === 11) {
@@ -130,21 +130,21 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
         return false;
       }
     },
-    getVimeoId: function(str) {
+    getVimeoId: function (str) {
       if (str.indexOf('vimeo') > 0) {
         return str;
       } else {
         return false;
       }
     },
-    getInstagramId: function(str) {
+    getInstagramId: function (str) {
       if (str.indexOf('instagram') > 0) {
         return str;
       } else {
         return false;
       }
     },
-    navigate: function(event) {
+    navigate: function (event) {
       event = event || window.event;
       if (event.keyCode === 39 || event.keyCode === 37) {
         if (event.keyCode === 39) {
@@ -154,7 +154,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
         }
       }
     },
-    navigateTo: function(index) {
+    navigateTo: function (index) {
       var next, src;
       if (index < 0 || index > this.gallery_items.length - 1) {
         return this;
@@ -173,7 +173,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
         }
       }
     },
-    navigate_left: function() {
+    navigate_left: function () {
       if (this.gallery_items.length === 1) {
         return;
       }
@@ -185,7 +185,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       this.options.onNavigate.call(this, 'left', this.gallery_index);
       return this.navigateTo(this.gallery_index);
     },
-    navigate_right: function() {
+    navigate_right: function () {
       if (this.gallery_items.length === 1) {
         return;
       }
@@ -197,7 +197,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       this.options.onNavigate.call(this, 'right', this.gallery_index);
       return this.navigateTo(this.gallery_index);
     },
-    detectRemoteType: function(src, type) {
+    detectRemoteType: function (src, type) {
       var video_id;
       type = type || false;
       if (type === 'image' || this.isImage(src)) {
@@ -220,7 +220,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
         return this.loadRemoteContent(src);
       }
     },
-    updateTitleAndFooter: function() {
+    updateTitleAndFooter: function () {
       var caption, footer, header, title;
       header = this.modal_content.find('.modal-header');
       footer = this.modal_content.find('.modal-footer');
@@ -238,23 +238,23 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       }
       return this;
     },
-    showLoading: function() {
+    showLoading: function () {
       this.lightbox_body.html('<div class="modal-loading">' + this.options.loadingMessage + '</div>');
       return this;
     },
-    showYoutubeVideo: function(id) {
+    showYoutubeVideo: function (id) {
       var height, width;
       width = this.checkDimensions(this.$element.data('width') || 560);
       height = width / (560 / 315);
       return this.showVideoIframe('//www.youtube.com/embed/' + id + '?badge=0&autoplay=1&html5=1', width, height);
     },
-    showVimeoVideo: function(id) {
+    showVimeoVideo: function (id) {
       var height, width;
       width = this.checkDimensions(this.$element.data('width') || 560);
       height = width / (500 / 281);
       return this.showVideoIframe(id + '?autoplay=1', width, height);
     },
-    showInstagramVideo: function(id) {
+    showInstagramVideo: function (id) {
       var height, width;
       width = this.checkDimensions(this.$element.data('width') || 612);
       this.resize(width);
@@ -265,7 +265,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
         return this.modal_arrows.css('display', 'none');
       }
     },
-    showVideoIframe: function(url, width, height) {
+    showVideoIframe: function (url, width, height) {
       height = height || width;
       this.resize(width);
       this.lightbox_body.html('<div class="embed-responsive embed-responsive-16by9"><iframe width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>');
@@ -275,14 +275,14 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       }
       return this;
     },
-    loadRemoteContent: function(url) {
+    loadRemoteContent: function (url) {
       var disableExternalCheck, width,
         _this = this;
       width = this.$element.data('width') || 560;
       this.resize(width);
       disableExternalCheck = this.$element.data('disableExternalCheck') || false;
       if (!disableExternalCheck && !this.isExternal(url)) {
-        this.lightbox_body.load(url, $.proxy(function() {
+        this.lightbox_body.load(url, $.proxy(function () {
           return _this.$element.trigger('loaded.bs.modal');
         }));
       } else {
@@ -294,7 +294,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       }
       return this;
     },
-    isExternal: function(url) {
+    isExternal: function (url) {
       var match;
       match = url.match(/^([^:\/?#]+:)?(?:\/\/([^\/?#]*))?([^?#]+)?(\?[^#]*)?(#.*)?/);
       if (typeof match[1] === "string" && match[1].length > 0 && match[1].toLowerCase() !== location.protocol) {
@@ -308,16 +308,16 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       }
       return false;
     },
-    error: function(message) {
+    error: function (message) {
       this.lightbox_body.html(message);
       return this;
     },
-    preloadImage: function(src, onLoadShowImage) {
+    preloadImage: function (src, onLoadShowImage) {
       var img,
         _this = this;
       img = new Image();
       if ((onLoadShowImage == null) || onLoadShowImage === true) {
-        img.onload = function() {
+        img.onload = function () {
           var image;
           image = $('<img />');
           image.attr('src', img.src);
@@ -326,28 +326,28 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
           if (_this.modal_arrows) {
             _this.modal_arrows.css('display', 'block');
           }
-          return image.load(function() {
+          return image.load(function () {
             _this.resize(img.width);
             return _this.options.onContentLoaded.call(_this);
           });
         };
-        img.onerror = function() {
+        img.onerror = function () {
           return _this.error('Failed to load image: ' + src);
         };
       }
       img.src = src;
       return img;
     },
-    resize: function(width) {
+    resize: function (width) {
       var width_total;
       width_total = width + this.border.left + this.padding.left + this.padding.right + this.border.right;
       this.modal_dialog.css('width', 'auto').css('max-width', width_total);
-      this.lightbox_container.find('a').css('line-height', function() {
+      this.lightbox_container.find('a').css('line-height', function () {
         return $(this).parent().height() + 'px';
       });
       return this;
     },
-    checkDimensions: function(width) {
+    checkDimensions: function (width) {
       var body_width, width_total;
       width_total = width + this.border.left + this.padding.left + this.padding.right + this.border.right;
       body_width = document.body.clientWidth;
@@ -356,10 +356,10 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       }
       return width;
     },
-    close: function() {
+    close: function () {
       return this.modal.modal('hide');
     },
-    addTrailingSlash: function(url) {
+    addTrailingSlash: function (url) {
       if (url.substr(-1) !== '/') {
         url += '/';
       }
@@ -367,8 +367,8 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
     }
   };
 
-  $.fn.ekkoLightbox = function(options) {
-    return this.each(function() {
+  $.fn.ekkoLightbox = function (options) {
+    return this.each(function () {
       var $this;
       $this = $(this);
       options = $.extend({
@@ -389,12 +389,12 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
     type: null,
     always_show_close: true,
     loadingMessage: 'Loading...',
-    onShow: function() {},
-    onShown: function() {},
-    onHide: function() {},
-    onHidden: function() {},
-    onNavigate: function() {},
-    onContentLoaded: function() {}
+    onShow: function () { },
+    onShown: function () { },
+    onHide: function () { },
+    onHidden: function () { },
+    onNavigate: function () { },
+    onContentLoaded: function () { }
   };
 
 }).call(this);
