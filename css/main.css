@@ -481,6 +481,15 @@ SIDEBAR + RIGHT COLUMN
   }
 }
 
+@media (min-width: 768px) {
+  .content-column-content {
+    min-height: calc(100vh - 190px);
+    min-height: -moz-calc(100vh - 190px);
+    min-height: -webkit-calc(100vh - 190px);
+    min-height: -o-calc(100vh - 190px);
+  }
+}
+
 .content-column-content p.lead {
   color: #555555;
 }
@@ -1086,6 +1095,15 @@ a:active {
 .grid {
   margin-right: -15px;
   margin-left: -15px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    min-height: calc(100vh - 190px);
+    min-height: -moz-calc(100vh - 190px);
+    min-height: -webkit-calc(100vh - 190px);
+    min-height: -o-calc(100vh - 190px);
+  }
 }
 
 .box-masonry {
