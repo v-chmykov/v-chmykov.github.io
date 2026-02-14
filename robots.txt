@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dressed-in-a-dress.com/sitemap.xml
