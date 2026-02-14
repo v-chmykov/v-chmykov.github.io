@@ -1,3 +1,7 @@
+.elevator-hidden {
+  display: none !important;
+}
+
 @font-face {
   font-family: 'quentinregular';
   src: url('fonts/quentin-webfont.woff2') format('woff2'),

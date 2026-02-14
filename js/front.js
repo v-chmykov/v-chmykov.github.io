@@ -2,7 +2,6 @@ masonry();
 
 $(function () {
     offCanvas();
-    lightbox();
     carousels();
     utils();
     highlightCurrentPage();
@@ -47,16 +46,6 @@ function offCanvas() {
         $('[data-toggle="offcanvas"]').on('click', function () {
             $('.row-offcanvas').toggleClass('active')
         });
-    });
-}
-
-/* =========================================
- *  lightbox
- *  =======================================*/
-function lightbox() {
-    $(document).on('delegate', '*[data-toggle="lightbox"]', 'click', function (event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
     });
 }
 
@@ -196,9 +185,9 @@ $(document).ready(function () {
         window.scrollTo(0, 0);
     });
 
-    $elevator.toggleClass("hidden", window.pageYOffset < limit);
+    $elevator.addClass("elevator-hidden");
 
     $(window).on("scroll", function () {
-        $elevator.toggleClass("hidden", window.pageYOffset < limit);
+        $elevator.toggleClass("elevator-hidden", window.pageYOffset < limit);
     });
 });
