@@ -1,28 +1,65 @@
 masonry();
 
-$(function () {
+document.addEventListener('DOMContentLoaded', function () {
     offCanvas();
     carousels();
-    utils();
     highlightCurrentPage();
+    elevator();
 });
 
 function highlightCurrentPage() {
-    $("a[href='" + location.href + "']").parent().addClass("active");
+    var links = document.querySelectorAll("a[href='" + location.href + "']");
+    links.forEach(function (a) {
+        a.parentElement.classList.add('active');
+    });
 }
 
 /* =========================================
  *  carousels
  *  =======================================*/
 function carousels() {
-    $('#main-slider').owlCarousel({
-        navigation: true, // Show next and prev buttons
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        autoPlay: true,
-        stopOnHover: true,
-        singleItem: true,
-        afterInit: ''
+    document.querySelectorAll('.carousel-images').forEach(function (container) {
+        var imgs = Array.from(container.querySelectorAll('img'));
+        if (imgs.length === 0) return;
+
+        var list = document.createElement('ul');
+        list.className = 'splide__list';
+        imgs.forEach(function (img) {
+            var li = document.createElement('li');
+            li.className = 'splide__slide';
+            li.appendChild(img);
+            list.appendChild(li);
+        });
+
+        var track = document.createElement('div');
+        track.className = 'splide__track';
+        track.appendChild(list);
+
+        var splideEl = document.createElement('div');
+        splideEl.className = 'splide';
+        splideEl.appendChild(track);
+
+        container.parentNode.replaceChild(splideEl, container);
+
+        new Splide(splideEl, {
+            type: 'loop',
+            autoplay: false,
+            arrows: true,
+            pagination: true,
+        }).mount();
+
+        // Rearrange controls into a single row below the image: [←] [● ● ●] [→]
+        var arrowsEl = splideEl.querySelector('.splide__arrows');
+        var paginationEl = splideEl.querySelector('.splide__pagination');
+        if (arrowsEl && paginationEl) {
+            var controls = document.createElement('div');
+            controls.className = 'splide__controls';
+            splideEl.appendChild(controls);
+            controls.appendChild(arrowsEl.querySelector('.splide__arrow--prev'));
+            controls.appendChild(paginationEl);
+            controls.appendChild(arrowsEl.querySelector('.splide__arrow--next'));
+            arrowsEl.remove();
+        }
     });
 }
 
@@ -30,11 +67,13 @@ function carousels() {
  *  masonry
  *  =======================================*/
 function masonry() {
-    var $grid = $('.grid').masonry({
-        itemSelector: ".masonry-item"
+    var gridEl = document.querySelector('.grid');
+    if (!gridEl) return;
+    var msnry = new Masonry(gridEl, {
+        itemSelector: '.masonry-item'
     });
-    $grid.imagesLoaded().progress(function () {
-        $grid.masonry('layout');
+    imagesLoaded(gridEl).on('progress', function () {
+        msnry.layout();
     });
 }
 
@@ -42,156 +81,27 @@ function masonry() {
  *  Off-canvas menu
  *  =======================================*/
 function offCanvas() {
-    $(document).ready(function () {
-        $('[data-toggle="offcanvas"]').on('click', function () {
-            $('.row-offcanvas').toggleClass('active')
+    document.querySelectorAll('[data-toggle="offcanvas"]').forEach(function (el) {
+        el.addEventListener('click', function () {
+            document.querySelector('.row-offcanvas').classList.toggle('active');
         });
     });
 }
 
 /* =========================================
- *  utils
+ *  Scroll-to-top elevator
  *  =======================================*/
-function utils() {
-    /* tooltips */
-    $('[data-toggle="tooltip"]').tooltip();
-
-    /* click on the box activates the radio */
-    $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
-        var radio = $(this).find(':radio');
-        radio.prop('checked', true);
-    });
-
-    /* click on the box activates the link in it */
-    $('.box.clickable').on('click', function (e) {
-        window.location = $(this).find('a').attr('href');
-    });
-
-    /* external links in new window*/
-    $('.external').on('click', function (e) {
-        e.preventDefault();
-        window.open($(this).attr("href"));
-    });
-
-    /* animated scrolling */
-    $('.scroll-to').on('click', function (event) {
-        event.preventDefault();
-        var full_url = this.href;
-        var parts = full_url.split("#");
-        var trgt = parts[1];
-        var target = document.getElementById(trgt);
-        if (target) {
-            var top = target.getBoundingClientRect().top + window.scrollY - 80;
-            window.scrollTo({ top: top, behavior: 'smooth' });
-        }
-    });
-}
-
-/* product detail gallery */
-function productDetailGallery(confDetailSwitch) {
-    $('.thumb:first').addClass('active');
-    timer = setInterval(autoSwitch, confDetailSwitch);
-    $(".thumb").click(function (e) {
-        switchImage($(this));
-        clearInterval(timer);
-        timer = setInterval(autoSwitch, confDetailSwitch);
-        e.preventDefault();
-    }
-    );
-    $('#mainImage').hover(function () {
-        clearInterval(timer);
-    }, function () {
-        timer = setInterval(autoSwitch, confDetailSwitch);
-    });
-    function autoSwitch() {
-        var nextThumb = $('.thumb.active').closest('div').next('div').find('.thumb');
-        if (nextThumb.length == 0) {
-            nextThumb = $('.thumb:first');
-        }
-        switchImage(nextThumb);
-    }
-    function switchImage(thumb) {
-        $('.thumb').removeClass('active');
-        var bigUrl = thumb.attr('href');
-        thumb.addClass('active');
-        $('#mainImage img').attr('src', bigUrl);
-    }
-}
-
-/* product detail sizes */
-function productDetailSizes() {
-    $('.sizes a').click(function (e) {
-        e.preventDefault();
-        $('.sizes a').removeClass('active');
-        $('.size-input').prop('checked', false);
-        $(this).addClass('active');
-        $(this).next('input').prop('checked', true);
-    });
-}
-
-$.fn.alignElementsSameHeight = function () {
-    $('.same-height-row').each(function () {
-        var maxHeight = 0;
-        var children = $(this).find('.same-height');
-        children.height('auto');
-        if ($(window).width() > 768) {
-            children.each(function () {
-                if ($(this).innerHeight() > maxHeight) {
-                    maxHeight = $(this).innerHeight();
-                }
-            });
-            children.innerHeight(maxHeight);
-        }
-        maxHeight = 0;
-        children = $(this).find('.same-height-always');
-        children.height('auto');
-        children.each(function () {
-            if ($(this).height() > maxHeight) {
-                maxHeight = $(this).innerHeight();
-            }
-        });
-        children.innerHeight(maxHeight);
-    });
-}
-
-var windowWidth = 0;
-
-$(window).on('load', function () {
-    windowWidth = $(window).width();
-    $(this).alignElementsSameHeight();
-});
-
-$(window).on('resize', function () {
-    newWindowWidth = $(window).width();
-    if (windowWidth !== newWindowWidth) {
-        setTimeout(function () {
-            $(this).alignElementsSameHeight();
-        }, 205);
-        windowWidth = newWindowWidth;
-    }
-});
-
-$(document).ready(function () {
-    $(".owl-carousel").owlCarousel({
-        autoplay: false,
-        navigation: true, // Show next and prev buttons
-        singleItem: true,
-        navigationText: ["<", ">"]
-    });
-});
-
-$(document).ready(function () {
-    var $elevator = $("#js-scroll-to-top");
+function elevator() {
+    var el = document.getElementById('js-scroll-to-top');
+    if (!el) return;
     var limit = window.innerHeight / 2;
 
-    $elevator.on("click", function (e) {
+    el.addEventListener('click', function (e) {
         e.preventDefault();
         window.scrollTo(0, 0);
     });
 
-    $elevator.addClass("elevator-hidden");
-
-    $(window).on("scroll", function () {
-        $elevator.toggleClass("elevator-hidden", window.pageYOffset < limit);
+    window.addEventListener('scroll', function () {
+        el.classList.toggle('elevator-hidden', window.pageYOffset < limit);
     });
-});
+}

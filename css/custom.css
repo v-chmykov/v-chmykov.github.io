@@ -65,35 +65,51 @@
   display: inline;
 }
 
-.owl-carousel li {
-  list-style: none;
+.splide__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.4em;
+  padding: 0.6em 0;
+  margin-bottom: 10px;
 }
 
-.owl-theme .owl-controls .owl-page span {
+.splide__controls .splide__arrow {
+  position: static;
+  transform: none;
   background-color: #ef5285;
+  height: 30px;
+  width: 30px;
+  opacity: 0.5;
+  flex-shrink: 0;
 }
 
-.owl-theme .owl-controls .owl-page span,
-.owl-theme .owl-controls .owl-buttons .owl-next,
-.owl-theme .owl-controls .owl-buttons .owl-prev {
+.splide__controls .splide__arrow svg {
+  fill: #fff;
+}
+
+.splide__controls .splide__arrow:hover:not(:disabled) {
+  background-color: #ef5285;
+  opacity: 1;
+}
+
+.splide__controls .splide__pagination {
+  position: static;
+  bottom: auto;
+  padding: 0 0.4em;
+}
+
+.splide__pagination__page {
+  background-color: #ef5285;
   opacity: 0.5;
 }
 
-.owl-theme .owl-controls .owl-buttons .owl-next,
-.owl-theme .owl-controls .owl-buttons .owl-prev {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: 1px solid #ef5285;
-  font-weight: bold;
-  color: #fff;
+.splide__pagination__page.is-active,
+.splide__pagination__page:hover {
   background-color: #ef5285;
-}
-
-.owl-theme .owl-controls.clickable .owl-page:hover span,
-.owl-theme .owl-controls .owl-buttons .owl-next:hover,
-.owl-theme .owl-controls .owl-buttons .owl-prev:hover {
   opacity: 1;
+  transform: scale(1.4);
 }
 
 /* Iubenda Cookie Banner - I need to overwrite the font */
