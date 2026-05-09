@@ -500,15 +500,11 @@ SIDEBAR + RIGHT COLUMN
   margin-bottom: 1em;
 }
 
-.content-column-content li {
-  color: #999999;
-}
-
 .content-column-content ul li {
   list-style-type: none;
 }
 
-.content-column-content ul li:before {
+.content-column-content > ul > li:before {
   font-family: 'FontAwesome';
   content: '\f105';
   margin: 0 5px 0 -15px;
